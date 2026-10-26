@@ -1481,3 +1481,38 @@ footer {
         flex: 0 0 52px;
     }
 }
+
+/* HQ LOGO START */
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.brand-logo,
+.site-header .brand-logo,
+.site-footer .brand-logo {
+    display: block;
+    width: 78px;
+    height: 78px;
+    min-width: 78px;
+    flex: 0 0 78px;
+    object-fit: contain;
+    object-position: center;
+}
+
+@media (max-width: 760px) {
+    .brand {
+        gap: 10px;
+    }
+
+    .brand-logo,
+    .site-header .brand-logo,
+    .site-footer .brand-logo {
+        width: 52px;
+        height: 52px;
+        min-width: 52px;
+        flex: 0 0 52px;
+    }
+}
+/* HQ LOGO END */
