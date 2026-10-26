@@ -1459,3 +1459,25 @@ footer {
     color: #333333;
   }
 }
+
+/* HUONGQUYNH TECHVISION brand logo */
+.brand-logo,
+.site-header .brand-logo,
+.site-footer .brand-logo {
+    display: block;
+    width: 78px;
+    height: 78px;
+    flex: 0 0 78px;
+    object-fit: contain;
+    object-position: center;
+}
+
+@media (max-width: 760px) {
+    .brand-logo,
+    .site-header .brand-logo,
+    .site-footer .brand-logo {
+        width: 52px;
+        height: 52px;
+        flex: 0 0 52px;
+    }
+}
