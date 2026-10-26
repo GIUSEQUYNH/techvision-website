@@ -1516,3 +1516,335 @@ footer {
     }
 }
 /* HQ LOGO END */
+
+
+/* HQ TYPOGRAPHY SYSTEM START */
+
+:root {
+    --hq-font-body: Arial, "Segoe UI", Helvetica, sans-serif;
+
+    --hq-text-xs: 0.8125rem;
+    --hq-text-sm: 0.9375rem;
+    --hq-text-base: 1rem;
+    --hq-text-lead: 1.125rem;
+    --hq-text-card: 1.25rem;
+
+    --hq-heading-sm: clamp(1.75rem, 3vw, 2.25rem);
+    --hq-heading-md: clamp(2.25rem, 4vw, 3rem);
+    --hq-heading-lg: clamp(3.75rem, 5.8vw, 4.5rem);
+
+    --hq-line-tight: 1.08;
+    --hq-line-heading: 1.16;
+    --hq-line-body: 1.65;
+
+    --hq-letter-tight: -0.035em;
+    --hq-letter-label: 0.12em;
+}
+
+/* Nền tảng chữ */
+
+html {
+    font-size: 16px;
+    text-size-adjust: 100%;
+}
+
+body {
+    font-family: var(--hq-font-body);
+    font-size: var(--hq-text-base);
+    line-height: var(--hq-line-body);
+    letter-spacing: 0;
+}
+
+/* Tiêu đề */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    color: inherit;
+    font-family: var(--hq-font-body);
+    font-weight: 700;
+    text-wrap: balance;
+}
+
+h1 {
+    font-size: var(--hq-heading-lg);
+    line-height: var(--hq-line-tight);
+    letter-spacing: -0.045em;
+}
+
+h2 {
+    font-size: var(--hq-heading-md);
+    line-height: var(--hq-line-heading);
+    letter-spacing: var(--hq-letter-tight);
+}
+
+h3 {
+    font-size: var(--hq-text-card);
+    line-height: 1.3;
+    letter-spacing: -0.015em;
+}
+
+p,
+li,
+label,
+input,
+textarea,
+button {
+    font-size: var(--hq-text-base);
+}
+
+/* Header và thương hiệu */
+
+.brand {
+    font-size: 1.05rem;
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+}
+
+.brand > span:last-child {
+    font-size: 1.05rem;
+    font-weight: 800;
+}
+
+.nav-links a {
+    font-size: var(--hq-text-sm);
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+/* Hero */
+
+.hero h1,
+.industrial-hero h1 {
+    max-width: 820px;
+    margin-bottom: 0;
+    font-size: var(--hq-heading-lg);
+    font-weight: 720;
+    line-height: var(--hq-line-tight);
+    letter-spacing: -0.05em;
+}
+
+.hero h1 span,
+.industrial-hero h1 span {
+    display: block;
+    margin-top: 0.12em;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+.eyebrow,
+.hero-eyebrow,
+.section-label,
+.project-category {
+    font-size: var(--hq-text-xs);
+    font-weight: 750;
+    line-height: 1.55;
+    letter-spacing: var(--hq-letter-label);
+    text-transform: uppercase;
+}
+
+.hero-subtitle,
+.hero-description {
+    max-width: 700px;
+    font-size: var(--hq-text-lead);
+    line-height: 1.65;
+}
+
+/* Nút */
+
+.button,
+button,
+input[type="submit"] {
+    font-family: inherit;
+    font-size: var(--hq-text-sm);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0;
+}
+
+/* Chỉ số Hero */
+
+.hero-stats strong,
+.hero-metrics dt,
+.stat strong {
+    font-size: 1.5rem;
+    font-weight: 750;
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+}
+
+.hero-stats span,
+.hero-metrics dd,
+.stat span {
+    font-size: var(--hq-text-sm);
+    line-height: 1.45;
+}
+
+/* Tiêu đề khu vực */
+
+.section-heading {
+    max-width: 820px;
+}
+
+.section-heading h2,
+.about-content h2,
+.contact-info h2,
+.cta-box h2 {
+    margin-bottom: 1.25rem;
+    font-size: var(--hq-heading-md);
+    font-weight: 700;
+    line-height: var(--hq-line-heading);
+    letter-spacing: var(--hq-letter-tight);
+}
+
+.section-heading > p:not(.section-label),
+.about-content > p,
+.contact-info > p,
+.cta-box > p {
+    font-size: var(--hq-text-base);
+    line-height: var(--hq-line-body);
+}
+
+/* Card */
+
+.solution-card h3,
+.service-card h3,
+.project-card h3,
+.capability-item strong {
+    margin-bottom: 0.75rem;
+    font-size: var(--hq-text-card);
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.solution-card p,
+.service-card p,
+.project-card p,
+.capability-item > span:last-child {
+    font-size: var(--hq-text-base);
+    line-height: 1.6;
+}
+
+/* Nội dung và danh sách */
+
+.check-list li,
+.contact-details li,
+.footer-description,
+.footer-links a {
+    font-size: var(--hq-text-base);
+    line-height: 1.6;
+}
+
+/* Biểu mẫu */
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.45rem;
+    font-size: var(--hq-text-sm);
+    font-weight: 650;
+}
+
+.contact-form input,
+.contact-form textarea {
+    font-size: var(--hq-text-base);
+    line-height: 1.45;
+}
+
+/* Footer */
+
+.footer-title {
+    font-size: var(--hq-text-base);
+    font-weight: 750;
+    line-height: 1.3;
+}
+
+.footer-bottom {
+    font-size: var(--hq-text-sm);
+    line-height: 1.5;
+}
+
+/* Tablet */
+
+@media (max-width: 960px) {
+    :root {
+        --hq-heading-lg: clamp(3.25rem, 8vw, 4rem);
+        --hq-heading-md: clamp(2rem, 5vw, 2.65rem);
+    }
+
+    .hero-subtitle,
+    .hero-description {
+        font-size: 1.0625rem;
+    }
+}
+
+/* Điện thoại */
+
+@media (max-width: 760px) {
+    :root {
+        --hq-text-base: 0.96875rem;
+        --hq-text-lead: 1rem;
+        --hq-text-card: 1.125rem;
+
+        --hq-heading-lg: clamp(2.5rem, 11vw, 3rem);
+        --hq-heading-md: clamp(1.875rem, 8vw, 2.25rem);
+    }
+
+    body {
+        line-height: 1.6;
+    }
+
+    .brand > span:last-child {
+        max-width: 150px;
+        font-size: 0.86rem;
+        line-height: 1.08;
+    }
+
+    .nav-links a {
+        font-size: 1rem;
+    }
+
+    .hero h1,
+    .industrial-hero h1 {
+        font-size: var(--hq-heading-lg);
+        line-height: 1.02;
+        letter-spacing: -0.04em;
+    }
+
+    .hero-subtitle,
+    .hero-description {
+        font-size: var(--hq-text-lead);
+    }
+
+    .hero-stats strong,
+    .hero-metrics dt,
+    .stat strong {
+        font-size: 1.3rem;
+    }
+
+    .section-heading h2,
+    .about-content h2,
+    .contact-info h2,
+    .cta-box h2 {
+        font-size: var(--hq-heading-md);
+    }
+}
+
+/* Màn hình điện thoại nhỏ */
+
+@media (max-width: 390px) {
+    :root {
+        --hq-heading-lg: 2.35rem;
+        --hq-heading-md: 1.8rem;
+    }
+
+    .brand > span:last-child {
+        max-width: 125px;
+        font-size: 0.78rem;
+    }
+}
+
+/* HQ TYPOGRAPHY SYSTEM END */
