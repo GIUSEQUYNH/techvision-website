@@ -1,10 +1,10 @@
 {
   "manifest_version": 3,
-  "name": "TECHVISION AUTOMATION",
+  "name": "HUONGQUYNH TECHVISION",
   "version": "1.0.0",
-  "description": "Truy cập nhanh website TECHVISION AUTOMATION và khám phá các giải pháp tự động hóa.",
+  "description": "Truy cập nhanh website HUONGQUYNH TECHVISION và khám phá các giải pháp tự động hóa.",
   "action": {
     "default_popup": "popup.html",
-    "default_title": "TECHVISION AUTOMATION"
+    "default_title": "HUONGQUYNH TECHVISION"
   }
 }
