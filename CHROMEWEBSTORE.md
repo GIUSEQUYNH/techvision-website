@@ -15,7 +15,7 @@ Truy cập website HUONGQUYNH Group ngay từ trình duyệt Chrome.
 
 Khám phá HUONGQUYNH Group và tìm hiểu thêm về các giải pháp công nghệ, tự động hóa và định hướng vận hành hiệu quả.
 
-Mở tiện ích, chọn “Mở website TECHVISION” để truy cập website chính thức.
+Mở tiện ích, chọn “Mở website Group” để truy cập website chính thức.
 
 Tiện ích không yêu cầu quyền truy cập dữ liệu trình duyệt và không thu thập dữ liệu người dùng.
 
