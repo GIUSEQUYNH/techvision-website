@@ -1,19 +1,19 @@
-# Chrome Web Store — HUONGQUYNH TECHVISION
+# Chrome Web Store — HUONGQUYNH Group
 
 > Last Updated: 2026-10-25
 
 ## Store Listing
 
 **Extension Name**  
-HUONGQUYNH TECHVISION
+HUONGQUYNH Group
 
 **Short Description**  
-Truy cập nhanh website HUONGQUYNH TECHVISION và khám phá các giải pháp tự động hóa.
+Truy cập nhanh website HUONGQUYNH Group và khám phá các giải pháp tự động hóa.
 
 **Detailed Description**  
-Truy cập website HUONGQUYNH TECHVISION ngay từ trình duyệt Chrome.
+Truy cập website HUONGQUYNH Group ngay từ trình duyệt Chrome.
 
-Khám phá HUONGQUYNH TECHVISION và tìm hiểu thêm về các giải pháp công nghệ, tự động hóa và định hướng vận hành hiệu quả.
+Khám phá HUONGQUYNH Group và tìm hiểu thêm về các giải pháp công nghệ, tự động hóa và định hướng vận hành hiệu quả.
 
 Mở tiện ích, chọn “Mở website TECHVISION” để truy cập website chính thức.
 
@@ -23,7 +23,7 @@ Tiện ích không yêu cầu quyền truy cập dữ liệu trình duyệt và 
 Productivity
 
 **Single Purpose**  
-Mở website HUONGQUYNH TECHVISION từ popup của Chrome.
+Mở website HUONGQUYNH Group từ popup của Chrome.
 
 **Primary Language**  
 Tiếng Việt
@@ -41,7 +41,7 @@ Tiếng Việt
 
 ### Screenshot Notes
 
-- Screenshot bắt buộc: popup HUONGQUYNH TECHVISION hiển thị trong Chrome, kèm nút mở website.
+- Screenshot bắt buộc: popup HUONGQUYNH Group hiển thị trong Chrome, kèm nút mở website.
 - Có thể bổ sung ảnh chụp trang chủ sau khi xác nhận nội dung và quyền sử dụng hình ảnh.
 - Tạo icon PNG 128×128 riêng trước khi gửi lên Chrome Web Store; extension hiện không khai báo icon.
 
@@ -84,7 +84,7 @@ Chưa có URL chính sách quyền riêng tư được xuất bản. Chuẩn b�
 ## Developer Info
 
 **Publisher Name** [REQUIRED]  
-HUONGQUYNH TECHVISION — xác nhận tên nhà phát hành hiển thị trong tài khoản Developer Dashboard.
+HUONGQUYNH Group — xác nhận tên nhà phát hành hiển thị trong tài khoản Developer Dashboard.
 
 **Contact Email** [REQUIRED]  
 Chưa cung cấp — điền email hỗ trợ có thể công khai trước khi gửi.
@@ -99,7 +99,7 @@ https://huongquynhgroupvn.com
 
 | Version | Date       | Changes                                                        | Status |
 | ------- | ---------- | -------------------------------------------------------------- | ------ |
-| 1.0.0   | 2026-10-25 | Popup giới thiệu HUONGQUYNH TECHVISION và liên kết mở website. | Draft  |
+| 1.0.0   | 2026-10-25 | Popup giới thiệu HUONGQUYNH Group và liên kết mở website. | Draft  |
 
 ## Review Notes
 
