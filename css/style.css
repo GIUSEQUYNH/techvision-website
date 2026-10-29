@@ -2243,5 +2243,68 @@ html {
 #contact {
     scroll-margin-top: calc(var(--header-height) + 24px);
 }
+/* ==================================================
+   FOOTER FINAL THREE-COLUMN LAYOUT
+   ================================================== */
 
+@media (min-width: 961px) {
+    .site-footer .footer-grid {
+        display: grid;
+        grid-template-columns:
+            minmax(360px, 1.45fr)
+            minmax(240px, 0.8fr)
+            minmax(220px, 0.7fr);
+        align-items: start;
+        gap: clamp(3rem, 6vw, 6rem);
+        width: 100%;
+    }
+
+    .site-footer .footer-grid > div {
+        min-width: 0;
+    }
+
+    .site-footer .footer-grid > div:first-child {
+        grid-column: auto;
+    }
+}
+
+.site-footer .footer-bottom {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-border);
+}
+
+@media (max-width: 960px) {
+    .site-footer .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 2.5rem;
+    }
+
+    .site-footer .footer-grid > div:first-child {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 700px) {
+    .site-footer .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .site-footer .footer-grid > div:first-child {
+        grid-column: auto;
+    }
+
+    .site-footer .footer-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+}
 
