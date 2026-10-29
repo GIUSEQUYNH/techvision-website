@@ -2307,4 +2307,133 @@ html {
         gap: 0.75rem;
     }
 }
+/* ==================================================
+   FOOTER TOP ALIGNMENT FIX
+   Can thang hang ba cot tren man hinh may tinh
+   ================================================== */
+
+@media (min-width: 961px) {
+    .site-footer .footer-grid {
+        display: grid !important;
+        grid-template-columns:
+            minmax(380px, 1.4fr)
+            minmax(260px, 0.8fr)
+            minmax(220px, 0.65fr) !important;
+        align-items: start !important;
+        column-gap: clamp(4rem, 7vw, 7rem);
+    }
+
+    .site-footer .footer-grid > div {
+        min-width: 0;
+        align-self: start;
+        margin: 0;
+        padding: 0;
+    }
+
+    .site-footer .footer-grid > div:first-child {
+        grid-column: auto !important;
+    }
+
+    .site-footer .footer-grid > div:first-child .brand {
+        margin: -0.35rem 0 0;
+        padding: 0;
+        align-items: flex-start;
+    }
+
+    .site-footer .footer-grid .footer-title {
+        margin: 0 0 1rem;
+        padding: 0;
+        line-height: 1.2;
+    }
+
+    .site-footer .footer-grid .brand-logo {
+        margin: 0;
+    }
+}
+/* ==================================================
+   FOOTER TOP ALIGNMENT FIX
+   Can thang hang ba cot tren man hinh may tinh
+   ================================================== */
+
+@media (min-width: 961px) {
+    .site-footer .footer-grid {
+        display: grid !important;
+        grid-template-columns:
+            minmax(380px, 1.4fr)
+            minmax(260px, 0.8fr)
+            minmax(220px, 0.65fr) !important;
+        align-items: start !important;
+        column-gap: clamp(4rem, 7vw, 7rem);
+    }
+
+    .site-footer .footer-grid > div {
+        min-width: 0;
+        align-self: start;
+        margin: 0;
+        padding: 0;
+    }
+
+    .site-footer .footer-grid > div:first-child {
+        grid-column: auto !important;
+    }
+
+    .site-footer .footer-grid > div:first-child .brand {
+        margin: -0.35rem 0 0;
+        padding: 0;
+        align-items: flex-start;
+    }
+
+    .site-footer .footer-grid .footer-title {
+        margin: 0 0 1rem;
+        padding: 0;
+        line-height: 1.2;
+    }
+
+    .site-footer .footer-grid .brand-logo {
+        margin: 0;
+    }
+}
+/* ==================================================
+   FOOTER TOP ALIGNMENT FIX
+   Can thang hang ba cot tren man hinh may tinh
+   ================================================== */
+
+@media (min-width: 961px) {
+    .site-footer .footer-grid {
+        display: grid !important;
+        grid-template-columns:
+            minmax(380px, 1.4fr)
+            minmax(260px, 0.8fr)
+            minmax(220px, 0.65fr) !important;
+        align-items: start !important;
+        column-gap: clamp(4rem, 7vw, 7rem);
+    }
+
+    .site-footer .footer-grid > div {
+        min-width: 0;
+        align-self: start;
+        margin: 0;
+        padding: 0;
+    }
+
+    .site-footer .footer-grid > div:first-child {
+        grid-column: auto !important;
+    }
+
+    .site-footer .footer-grid > div:first-child .brand {
+        margin: -0.35rem 0 0;
+        padding: 0;
+        align-items: flex-start;
+    }
+
+    .site-footer .footer-grid .footer-title {
+        margin: 0 0 1rem;
+        padding: 0;
+        line-height: 1.2;
+    }
+
+    .site-footer .footer-grid .brand-logo {
+        margin: 0;
+    }
+}
 
