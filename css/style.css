@@ -2436,4 +2436,79 @@ html {
         margin: 0;
     }
 }
+/* ==================================================
+   FOOTER BRAND LOGO POSITION FIX
+   Can giua logo va ten thuong hieu
+   ================================================== */
 
+@media (min-width: 961px) {
+    .site-footer .footer-grid > div:first-child .brand {
+        display: inline-flex;
+        align-items: center !important;
+        justify-content: flex-start;
+        gap: 14px;
+
+        min-height: 78px;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .site-footer .footer-grid > div:first-child .brand-logo {
+        display: block;
+        width: 78px;
+        height: 78px;
+        min-width: 78px;
+        flex: 0 0 78px;
+
+        margin: 0 !important;
+        padding: 0;
+        object-fit: contain;
+        object-position: center;
+        transform: none !important;
+    }
+
+    .site-footer .footer-grid > div:first-child .brand > span:last-child {
+        display: block;
+        margin: 0;
+        padding: 0;
+        line-height: 1.15;
+    }
+}
+
+
+/* ==================================================
+   FOOTER BRAND LOGO POSITION FIX
+   ================================================== */
+
+@media (min-width: 961px) {
+    .site-footer .footer-grid > div:first-child .brand {
+        display: inline-flex;
+        min-height: 78px;
+        align-items: center !important;
+        justify-content: flex-start;
+        gap: 14px;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .site-footer .footer-grid > div:first-child .brand-logo {
+        display: block;
+        width: 78px;
+        height: 78px;
+        min-width: 78px;
+        flex: 0 0 78px;
+        margin: 0 !important;
+        padding: 0;
+        object-fit: contain;
+        object-position: center;
+        transform: translateY(-4px) !important;
+    }
+
+    .site-footer .footer-grid > div:first-child .brand > span:last-child {
+        display: block;
+        margin: 0;
+        padding: 0;
+        line-height: 1.15;
+    }
+}
+/* FOOTER BRAND LOGO POSITION FIX END */
