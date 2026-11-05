@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="vi">
 <head>
   <meta charset="utf-8">
@@ -9,7 +9,7 @@
   <meta name="description" content="HUONGQUYNH Group cung cấp giải pháp tự động hóa, chuyển đổi số, IIoT, AI và hạ tầng công nghệ cho doanh nghiệp.">
   <meta name="theme-color" content="#050b18">
   <meta name="color-scheme" content="dark">
-s
+
   <meta property="og:type" content="website">
   <meta property="og:title" content="HUONGQUYNH Group">
   <meta property="og:description" content="Giải pháp tự động hóa, chuyển đổi số, IIoT và AI cho doanh nghiệp.">
@@ -428,7 +428,7 @@ s
           </ul>
         </div>
 
-        <form class="contact-form" action="mailto:huongquynh@hqgroupvn.onmicrosoft.com" method="post" enctype="text/plain">
+        <form class="contact-form" id="contact-form">
           <div class="form-row">
             <div>
               <label for="name">Họ và tên</label>
@@ -534,16 +534,59 @@ s
   </footer>
 
   <script>
-    (() => {
-      const toggle = document.querySelector('.menu-toggle');
-      const navigation = document.querySelector('.nav-links');
-      const links = document.querySelectorAll('.nav-links a');
-      const year = document.querySelector('#current-year');
+  (() => {
+    const toggle = document.querySelector('.menu-toggle');
+    const navigation = document.querySelector('.nav-links');
+    const links = document.querySelectorAll('.nav-links a');
+    const year = document.querySelector('#current-year');
+    const contactForm = document.querySelector('#contact-form');
 
-      if (year) year.textContent = new Date().getFullYear();
+    if (year) {
+      year.textContent = new Date().getFullYear();
+    }
 
-      if (!toggle || !navigation) return;
+    if (contactForm) {
+      contactForm.addEventListener('submit', (event) => {
+        event.preventDefault();
 
+        if (!contactForm.checkValidity()) {
+          contactForm.reportValidity();
+          return;
+        }
+
+        const formData = new FormData(contactForm);
+
+        const name = String(formData.get('name') || '').trim();
+        const company = String(formData.get('company') || '').trim();
+        const email = String(formData.get('email') || '').trim();
+        const phone = String(formData.get('phone') || '').trim();
+        const message = String(formData.get('message') || '').trim();
+
+        const recipient = 'huongquynh@hqgroupvn.onmicrosoft.com';
+        const subject = `Yêu cầu tư vấn từ ${name || 'khách hàng'}`;
+
+        const body = [
+          'YÊU CẦU TƯ VẤN TỪ WEBSITE HUONGQUYNH GROUP',
+          '',
+          `Họ và tên: ${name}`,
+          `Doanh nghiệp: ${company || 'Không cung cấp'}`,
+          `Email: ${email}`,
+          `Điện thoại: ${phone || 'Không cung cấp'}`,
+          '',
+          'Nội dung cần tư vấn:',
+          message
+        ].join('\n');
+
+        const mailtoLink =
+          `mailto:${recipient}` +
+          `?subject=${encodeURIComponent(subject)}` +
+          `&body=${encodeURIComponent(body)}`;
+
+        window.location.href = mailtoLink;
+      });
+    }
+
+    if (toggle && navigation) {
       const closeMenu = () => {
         navigation.classList.remove('is-open');
         navigation.dataset.open = 'false';
@@ -553,13 +596,19 @@ s
 
       toggle.addEventListener('click', () => {
         const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+
         navigation.classList.toggle('is-open', !isOpen);
         navigation.dataset.open = String(!isOpen);
         toggle.setAttribute('aria-expanded', String(!isOpen));
-        toggle.setAttribute('aria-label', isOpen ? 'Mở menu điều hướng' : 'Đóng menu điều hướng');
+        toggle.setAttribute(
+          'aria-label',
+          isOpen ? 'Mở menu điều hướng' : 'Đóng menu điều hướng'
+        );
       });
 
-      links.forEach((link) => link.addEventListener('click', closeMenu));
+      links.forEach((link) => {
+        link.addEventListener('click', closeMenu);
+      });
 
       document.addEventListener('keydown', (event) => {
         if (event.key === 'Escape') {
@@ -569,10 +618,13 @@ s
       });
 
       window.addEventListener('resize', () => {
-        if (window.innerWidth > 760) closeMenu();
+        if (window.innerWidth > 760) {
+          closeMenu();
+        }
       });
-    })();
-  </script>
+    }
+  })();
+</script>
 </body>
 </html>
 
