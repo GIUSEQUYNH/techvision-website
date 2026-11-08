@@ -3,3 +3,61 @@ skills-lock.json
 .DS_Store
 Thumbs.db
 node_modules/
+
+rag-api/.env
+rag-api/node_modules/
+qdrant-api-key.txt
+*.log
+# Local runtime and monitoring
+.hq-runtime/
+
+# Local RAG and knowledge data
+knowledge/
+knowledge-source/
+knowledge-ocr/
+ocr/
+rag-api/
+
+# Extraction outputs
+extraction-test.json
+gxworks3-extraction.json
+ocr-extraction-test.json
+
+# Local extraction utilities
+extract_document.py
+
+# Local administration scripts
+Get-HQSystemStatus.ps1
+Ingest-HuongQuynhKnowledge*.ps1
+Install-HQMonitoring.ps1
+Invoke-HuongQuynhAI.ps1
+Invoke-HuongQuynhRAG.ps1
+Monitor-HQSystem.ps1
+Open-HuongQuynhWebsite.ps1
+Start-HQSystem*.ps1
+Stop-HQSystem.ps1
+Uninstall-HQMonitoring.ps1
+
+# Local backups and archives
+archive/
+*.backup.ps1
+*.backup-*.zip
+index.backup-*.html
+index.before-*.html
+index.broken-*.html
+index.public-clean-*.html
+
+# Python cache
+__pycache__/
+*.pyc
+# Local website backups
+website-rag-backup-*.zip
+*.zip
+
+# Local RAG files, not ready for production
+rag-chat.js
+rag-chat.css
+
+# Unused local icon variants
+images/hq-logo-web.ico
+images/hq-logo-web-large.ico
