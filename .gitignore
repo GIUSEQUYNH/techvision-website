@@ -65,3 +65,7 @@ images/hq-logo-web-large.ico
 # Local deployment files
 backup-before-v6.19-*/
 HUONGQUYNH-Internal-App.ico
+
+# Local runtime and deployment backups
+HQ-Runtime.ps1
+backup-before-v6.*/
