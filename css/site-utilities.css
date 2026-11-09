@@ -1,0 +1,32 @@
+/* Additive behavior/accessibility rules. Published homepage design lives in site.css. */
+.skip-content{position:fixed;left:16px;top:-100px;z-index:300;background:#fff;color:#02063d;padding:12px 18px}
+.skip-content:focus{top:12px}
+.sr-status{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+[id]{scroll-margin-top:calc(var(--header-total-h) + 20px)}
+.modal{z-index:200}
+.panel input{min-width:0}
+.ai-breadcrumb{padding:24px clamp(22px,5vw,96px);color:var(--muted);font-size:14px;line-height:1.7}
+.ai-breadcrumb a:hover,.ai-prose a:not(.cta):hover{text-decoration:underline}
+.ai-content h1{font-size:var(--fs-hero,clamp(36px,5vw,64px));max-width:20ch}
+.ai-content .access{overflow-wrap:anywhere}
+.ai-content .card a{display:inline-block;line-height:1.6}
+.ai-prose p,.ai-prose li{max-width:80ch;line-height:1.8}
+.ai-prose h2:not(:first-child){margin-top:44px}
+.ai-prose a:not(.cta){color:#006476;text-decoration:underline}
+.ai-table{max-width:100%;overflow:auto}
+.ai-table table{border-collapse:collapse;width:100%;min-width:550px;text-align:left}
+.ai-table td,.ai-table th{padding:16px;border:1px solid #bbcdd4;line-height:1.6}
+.ai-table th{background:#dce8ec}
+.ai-checklist{max-width:850px;margin-top:28px}
+.ai-checklist label{display:flex;align-items:flex-start;gap:12px;margin:18px 0;line-height:1.7;cursor:pointer}
+.ai-checklist input{width:20px;height:20px;flex-shrink:0;margin-top:4px;accent-color:#007d8b}
+.ai-checklist button,.ai-search button{border:0;cursor:pointer}
+.ai-result{margin-top:24px;padding:24px;border:1px solid #abc6d0;background:#fff;line-height:1.7}
+.ai-result[hidden]{display:none}
+.ai-result h3{margin-top:0}
+.ai-search{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.ai-search input{padding:14px;border:1px solid #abc6d0;flex:1;min-width:160px}
+.ai-search .cta{margin-top:0}
+.ai-content .full-light .card{color:white}
+.ai-content :focus-visible{outline:2px solid #008c9c;outline-offset:4px}
+@media(max-width:650px){.ai-content .section{padding:48px 22px}.ai-content .layer{flex-direction:column}.ai-content .access{grid-template-columns:1fr 1fr}.ai-content .access a{font-size:14px;padding:18px 14px}}
