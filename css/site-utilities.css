@@ -65,3 +65,8 @@
  .ai-search{align-items:stretch;flex-direction:column}.ai-search input{width:100%}
 }
 @media(hover:none){.card:hover,.article:hover,.industry:hover,.layer:hover{transform:none}}
+
+/* Unpublished content remains explicit instead of linking to missing pages. */
+.content-pending{display:block;line-height:1.6;color:inherit;overflow-wrap:anywhere}
+.content-pending small{display:block;font-size:.75rem;font-weight:400;opacity:.8}
+.footer .content-pending{margin:8px 0;font-size:.84rem}

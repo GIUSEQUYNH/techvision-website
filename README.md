@@ -29,6 +29,15 @@ No build step or package installation is required. Serve this directory with a s
 
 ## Existing content gaps
 
-Some older product, industry, company and legal links already point to files absent from this repository. This update repairs primary navigation and AI routes; it does not invent company details, policies, case studies or unverified service content for those missing pages. Social profile URLs are also still placeholders.
+Links now lead to existing pages or relevant homepage sections. Unpublished company, legal, industry and article content is labeled “Chưa có nội dung” without a broken link. Unconfigured social-profile links are omitted. These content gaps still require verified business information before publication.
 
 The login dialog has no authentication backend; credential fields are disabled and the dialog explains its status. English translation is not implemented. The AI pages describe applications and architecture; they do not connect this public website to plant equipment or run AI inference. The readiness assessment runs only in the browser.
+
+## Content synchronization
+
+HTML pages are the source of truth for titles, descriptions and canonical URLs.
+After updating a page, run `python3 scripts/sync-content.py` to regenerate the search index and sitemap. Run `python3 scripts/sync-content.py --check` to check that generated files match the HTML and that local links, assets, anchors and canonical URLs are valid. Search and extension popup pages are excluded from the sitemap/search index.
+
+Keep updates to shared navigation/footer content consistent across the six pages using `css/site.css`; technical articles retain their own layout. No database or external data synchronization is configured.
+
+For a Windows checkout with local changes, preserve those changes and untracked files before integrating GitHub changes. Do not use a hard reset or overwrite the directory to synchronize it.
