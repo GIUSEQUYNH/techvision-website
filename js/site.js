@@ -1,5 +1,30 @@
 (() => {
   'use strict';
+  const navRow = document.querySelector('.navrow');
+  const nav = navRow?.querySelector('nav');
+  if (nav) {
+    const toggle = document.createElement('button');
+    toggle.type = 'button';
+    toggle.className = 'responsive-menu-toggle';
+    toggle.textContent = '☰ Menu';
+    nav.id ||= 'primary-navigation';
+    toggle.setAttribute('aria-controls', nav.id);
+    toggle.setAttribute('aria-expanded', 'false');
+    const close = () => {navRow.classList.remove('menu-open');toggle.setAttribute('aria-expanded', 'false')};
+    toggle.addEventListener('click', () => {
+      const open = navRow.classList.toggle('menu-open');
+      toggle.setAttribute('aria-expanded', String(open));
+    });
+    navRow.prepend(toggle);
+    navRow.classList.add('menu-ready');
+    nav.addEventListener('click', e => {if (e.target.closest('a')) close()});
+    document.addEventListener('click', e => {if (!navRow.contains(e.target)) close()});
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && navRow.classList.contains('menu-open')) {close();toggle.focus()}
+    });
+    navRow.addEventListener('focusout', e => {if (!navRow.contains(e.relatedTarget)) close()});
+    matchMedia('(max-width:900px)').addEventListener('change', close);
+  }
   const searchButton = document.querySelector('#search');
   const searchPanel = document.querySelector('#site-search');
   searchButton?.addEventListener('click', () => {

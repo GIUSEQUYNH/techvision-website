@@ -7,7 +7,7 @@
  sections.forEach((el,i)=>{el.classList.add('reveal');if(i%3===1)el.classList.add('reveal-left');if(i%3===2)el.classList.add('reveal-right')});
  document.querySelectorAll('.cards,.industries,.steps,.news,.layers,.footergrid,.legal-links').forEach(el=>el.classList.add('reveal-stagger'));
  const targets=[...document.querySelectorAll('.reveal,.reveal-stagger')];
- if(reduce){targets.forEach(el=>el.classList.add('is-visible'))}
+ if(reduce || !('IntersectionObserver' in window)){targets.forEach(el=>el.classList.add('is-visible'))}
  else{
   const io=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');io.unobserve(entry.target)}}),{threshold:.12,rootMargin:'0px 0px -8% 0px'});
   targets.forEach(el=>io.observe(el));
@@ -53,8 +53,8 @@
  hero.addEventListener('focusout',e=>{focused=hero.contains(e.relatedTarget);schedule()});
  motionPreference.addEventListener('change',e=>setPaused(e.matches));
  document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();else schedule()});
- let touchX=0;
- hero.addEventListener('touchstart',e=>{touchX=e.changedTouches[0].clientX},{passive:true});
- hero.addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-touchX;if(Math.abs(dx)>55)go(index+(dx<0?1:-1))},{passive:true});
+ let touchX=0, touchY=0;
+ hero.addEventListener('touchstart',e=>{touchX=e.changedTouches[0].clientX;touchY=e.changedTouches[0].clientY},{passive:true});
+ hero.addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-touchX;const dy=e.changedTouches[0].clientY-touchY;if(Math.abs(dx)>55 && Math.abs(dx)>Math.abs(dy))go(index+(dx<0?1:-1))},{passive:true});
  render(index);setPaused(paused);
 })();
